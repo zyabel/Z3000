@@ -4,57 +4,94 @@
   // font-family: $mainFontRegular;
   // font-family: "MyriadProBold";
   // font-family: "HelveticaNeue";
+header {
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 28px 16px;
 
-  nav {
-    .drop {
-      display: none;
-    }
-    .dropbtn:hover {
-      .drop {
-        display: block;
+      .logo-link {
+        color: $light-green;
+        text-transform: uppercase;
+        font-family: "MyriadProBold";
+        font-size: 24px;
       }
-    }
+
+      .icon {
+        display: block;
+        background: url(../img/menu-pic.png) no-repeat 50% 50% $light-green;
+        border-radius: 2px;
+        width: 31px;
+        height: 31px;
+      }
   }
 
-  .topnav {
-  overflow: hidden;
-  background-color: #333;
+  nav {
+    position: relative;
+    
+    .topnav {
+      display: none;
+      overflow: hidden;
+      background-color: #333;
+      text-transform: uppercase;
+      font-family: 'Sintony';
+
+      a {
+        display: block;
+        background: $nav-green;
+        color: $text-default;
+        text-align: center;
+        padding: 14px 16px;
+        border-bottom: 1px solid $nav-hover-green;
+        font-size: $fontSizeOne;
+
+        &:hover {
+          background-color: $nav-hover-green;
+        }
+      }
+      
+      .drop {
+        display: none;
+
+        li {
+
+          a {
+            background: $form-bg-grey;
+            border-bottom: 1px solid $nav-separator-grey;
+
+            &:hover {
+              color: $nav-green;
+            }
+          }
+        }
+      }
+
+      .dropbtn:hover {
+        .drop {
+          display: block;
+        }
+      }
+    }    
+  }
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
-    display: block;
+    display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: absolute;
+    display: block;
+    width: 100%;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
