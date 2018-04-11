@@ -1,9 +1,5 @@
 @import 'variables.scss';
 
-  // font-family: $mainFontRegular;
-  // font-family: "MyriadProBold";
-  // font-family: "HelveticaNeue";
-
 .main-wrapper {
   max-width: 320px;
   margin: 0 auto;
@@ -16,24 +12,40 @@ header {
     justify-content: space-between;
     padding: 28px 16px;
 
-      .logo-link {
-        color: $light-green;
-        text-transform: uppercase;
-        font-family: "MyriadProBold";
-        font-size: 24px;
-      }
+    .logo-link {
+      color: $light-green;
+      text-transform: uppercase;
+      font-family: "MyriadProBold";
+      font-size: 24px;
+    }
 
-      .icon {
-        display: block;
-        background: url(../img/menu-pic.png) no-repeat 50% 50% $light-green;
-        border-radius: 2px;
-        width: 31px;
-        height: 31px;
-      }
+    .icon {
+      display: block;
+      background: url(../img/menu-pic.png) no-repeat 50% 50% $light-green;
+      border-radius: 2px;
+      width: 31px;
+      height: 31px;
+    }
+
+    .desctop-menu,
+    .desctop-drop {
+      display: none;
+    }
+  }
+
+  .desctop-drop {
+    display: none;
   }
 
   nav {
     position: relative;
+
+    .topnav.responsive {
+      position: absolute;
+      display: block;
+      width: 100%;
+      @include animation;
+    }
     
     .topnav {
       display: none;
@@ -41,8 +53,6 @@ header {
       background-color: #333;
       text-transform: uppercase;
       font-family: 'Sintony';
-      opacity: 0;
-
 
       a {
         display: block;
@@ -420,6 +430,42 @@ footer {
   .company-info {
     max-width: 1600px;
     margin: 0 auto;
+  } 
+
+  header {
+    .logo a.icon {
+      display: none;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .desctop-drop {
+      display: none; 
+    }
+    
+    .logo nav.desctop-menu {
+      display: inline-block;
+      padding-top: 6px;
+
+      a {
+        padding: 30px 20px;
+        font-family: "MyriadProRegular";
+        color :$text-dark-grey;
+        font-size: $fontSizeOne;
+
+        &:hover {
+          color: $light-green;
+        }
+      }
+
+      #dropbtn:hover .desctop-drop {
+        display: block;
+      }
+    }
+    
+
   }
 
   .about-workers,
