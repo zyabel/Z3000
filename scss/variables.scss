@@ -2,7 +2,7 @@ $mainFontRegular: 'Sintony', sans-serif;
 $shadow-grey: #d6d7d7;
 $text-default: #fff;
 $text-grey: #737d84;
-$text-header-grey: #616870;
+$text-dark-grey: #616870;
 $nav-green: #58b9a1;
 $nav-hover-green: #53af99;
 $light-green: #63c6ae;
@@ -12,6 +12,7 @@ $main-bg-light-grey: #f7f7f7;
 $nav-separator-grey: #1e2325;
 $fontSizeOne: 14px;
 $fontSizeTwo: 18px;
+$fontSizeThree: 20px;
 
 @font-face {
 			font-family: "MyriadProRegular";
@@ -23,22 +24,29 @@ $fontSizeTwo: 18px;
 			font-weight: normal;
 	}
 
-	@font-face {
-			font-family: "MyriadProBold";
-			src: url("../fonts/MyriadProBold.eot");
-			src: url("../fonts/MyriadProBold.eot?#iefix")format("embedded-opentype"),
-			url("../fonts/MyriadProBold.woff") format("woff"),
-			url("../fonts/MyriadProBold.ttf") format("truetype");
-			font-style: normal;
-			font-weight: normal;
-  }
-  
-  @font-face {
-			font-family: "HelveticaNeue";
-			src: url("../fonts/HelveticaNeue.eot");
-			src: url("../fonts/HelveticaNeue.eot?#iefix")format("embedded-opentype"),
-			url("../fonts/HelveticaNeue.woff") format("woff"),
-			url("../fonts/HelveticaNeue.ttf") format("truetype");
-			font-style: normal;
-			font-weight: normal;
-	}
+@font-face {
+		font-family: "MyriadProBold";
+		src: url("../fonts/MyriadProBold.eot");
+		src: url("../fonts/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/MyriadProBold.woff") format("woff"),
+		url("../fonts/MyriadProBold.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@font-face {
+		font-family: "HelveticaNeue";
+		src: url("../fonts/HelveticaNeue.eot");
+		src: url("../fonts/HelveticaNeue.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/HelveticaNeue.woff") format("woff"),
+		url("../fonts/HelveticaNeue.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+
+@mixin animation {		
+		transition-property: opacity;
+		transition-duration: 1s;
+		transition-timing-function: linear;
+		opacity: 0;
+}

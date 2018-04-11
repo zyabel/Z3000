@@ -36,6 +36,8 @@ header {
       background-color: #333;
       text-transform: uppercase;
       font-family: 'Sintony';
+      opacity: 0;
+
 
       a {
         display: block;
@@ -76,7 +78,294 @@ header {
   }
 }
 
+.global-info {
+  background: url(../img/banner-image.png) no-repeat 50% 50%;
+  background-size: cover;
+  font-family: "MyriadProRegular";
+  color: $text-default;
+  text-align: center;
+  padding: 30px 28px;
 
+  h1 {
+    font-size: 26px;
+    padding-bottom: 30px;
+  }
+
+  p {
+    font-size: $fontSizeOne;   
+    padding-bottom: 30px; 
+  }
+
+  button {
+    padding: 21px 30px;
+    background: rgba($color: $text-default, $alpha: 0);
+    border: 2px solid $text-default;
+    border-radius: 4px;
+    color: $text-default;
+    font-size: $fontSizeThree;
+
+    &:hover {
+      background: rgba($color: $text-default, $alpha: 0.3);
+    }
+  }
+}
+
+.about-workers {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 16px;
+  border-bottom: 1px solid #e3e3e3;
+
+  >:nth-child(2) {
+    border: 5px solid $nav-green;
+  }
+
+  :nth-child(5) {
+    border: 5px solid $nav-green;
+  }
+
+  h2 {
+    padding: 16px 0;
+    font-family: "MyriadProRegular";
+    font-size: $fontSizeThree;
+    color: $nav-green;
+  }
+
+  .employee-block {    
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .img-wrap {
+      position: relative;   
+      
+      >img:first-child {
+        width: 100%;
+      }
+    
+      .photo-worker {        
+        overflow: hidden;
+        border: 4px solid #f3f3f3;
+        border-radius: 50%;
+        position: absolute;
+        left: 31%;
+        bottom: -16%;
+        background: #fcfcfc;
+      }
+    }
+
+    .content-wrap {
+      border-left: 1px solid #dbe1e7;
+      border-right: 1px solid #dbe1e7;
+
+        p {
+        padding: 53px 40px 0 16px;
+        font-family: "MyriadProRegular";
+        font-size: $fontSizeTwo;
+        color: $text-dark-grey;
+      }
+
+      a {
+        display: block;
+        padding: 25px 0 20px 16px;
+        font-family: "HelveticaNeue";
+        font-size: $fontSizeOne;
+        color: $light-green;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.news-info {
+  background: $main-bg-light-grey;
+  padding: 33px 16px;
+
+  .news-block {
+    font-family: "HelveticaNeue";
+
+    h2 {
+      color: $text-dark-grey;
+      font-size: $fontSizeTwo;
+      padding: 0 55px 26px 0;
+    }
+
+    p {
+      color: $text-grey;
+      font-size: $fontSizeOne;
+      padding-bottom: 35px;
+    }
+  }
+
+  button {
+    padding: 20px 110px;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Sintony';
+    font-weight: bold;
+    font-size: $fontSizeTwo;
+    color: $text-default;
+  }
+
+  .news-top-button {
+    background: $light-green;  
+    margin-bottom: 20px; 
+    
+    &:hover {
+      background: $nav-green;
+    }
+  }
+
+  .news-bottom-button {
+    background: #455357;
+
+    &:hover {
+      background: $nav-separator-grey;
+    }
+  }
+}
+
+.articles-wrapper {
+  font-family: $mainFontRegular;
+
+  h2 {
+    padding: 19px;
+    background: $light-green;
+    color: $text-default;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  article {
+    display: flex;
+    flex-flow: row wrap;
+    //justify-content: space-between;
+    background: $form-bg-grey;
+
+    >:nth-child(1) {
+      background: url(../img/article-bg1.png) no-repeat;
+    }
+    
+    >:nth-child(2) {
+      background: url(../img/article-bg2.png) no-repeat;
+    }
+    
+    :nth-child(3) {
+      background: url(../img/article-bg3.png) no-repeat;
+    }
+    
+    :nth-child(4) {
+      background: url(../img/article-bg4.png) no-repeat;
+    }
+    
+    section {
+      width: 160px;
+      height: 160px;
+
+      .section-content {
+        display: none;        
+      }
+
+
+      &:hover {        
+        .section-content {
+          display: block;  
+
+          h3 {
+            color: $nav-green;
+            font-size: 16px;
+          }
+          
+          span {
+            color: #9da5a3;
+            font-size: 12px;
+          }
+        }
+      }  
+    }
+  }
+}
+
+.company-info {
+  padding: 30px 16px;
+  background: $form-bg-grey;
+  border-bottom: 12px solid #1e2325;
+  color: #9da5a3;
+  font-family: $mainFontRegular;
+
+  .logo-company {
+    font-size: 20px;
+  }
+
+  p {
+    padding: 25px 0 37px;
+    font-size: $fontSizeOne;
+  }
+
+  form {
+    overflow: hidden;
+    font-family: $mainFontRegular;
+    font-size: $fontSizeOne;
+
+    label {
+      display: block;
+      margin-bottom: 22px;
+      font-size: $fontSizeTwo;
+    }
+
+    input, textarea {
+      width: 100%; 
+      padding: 24px 20px;
+      margin-bottom: 15px;
+      background: #181c1d;
+      border: none;
+      color: #9da5a3;
+      font-family: $mainFontRegular;
+      font-size: $fontSizeOne;
+    }
+
+    input[type='submit'] {
+      padding: 20px 110px;
+      text-align: center;
+      border-radius: 4px;
+      border: none;
+      color: $text-default;
+      background: $light-green;  
+    
+      &:hover {
+        background: $nav-green;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 20px 12px;
+  background: #181c1e;
+  color: #9da5a3;
+  font-family: $mainFontRegular;
+  font-size: $fontSizeOne;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 11px 11px;
+    color: #9da5a3;
+
+    &:hover {
+      color: $light-green;
+    }
+  }
+
+  p {
+    padding-top: 30px;
+    text-align: center;
+    line-height: 25px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -91,12 +380,9 @@ header {
     position: absolute;
     display: block;
     width: 100%;
+    @include animation;
   }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+
   .topnav.responsive a {
     float: none;
     display: block;

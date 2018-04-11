@@ -54,6 +54,7 @@ header nav .topnav {
   background-color: #333;
   text-transform: uppercase;
   font-family: 'Sintony';
+  opacity: 0;
 }
 
 header nav .topnav a {
@@ -87,6 +88,291 @@ header nav .topnav .dropbtn:hover .drop {
   display: block;
 }
 
+.global-info {
+  background: url(../img/banner-image.png) no-repeat 50% 50%;
+  background-size: cover;
+  font-family: "MyriadProRegular";
+  color: #fff;
+  text-align: center;
+  padding: 30px 28px;
+}
+
+.global-info h1 {
+  font-size: 26px;
+  padding-bottom: 30px;
+}
+
+.global-info p {
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+.global-info button {
+  padding: 21px 30px;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.global-info button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.about-workers {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 16px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.about-workers > :nth-child(2) {
+  border: 5px solid #58b9a1;
+}
+
+.about-workers :nth-child(5) {
+  border: 5px solid #58b9a1;
+}
+
+.about-workers h2 {
+  padding: 16px 0;
+  font-family: "MyriadProRegular";
+  font-size: 20px;
+  color: #58b9a1;
+}
+
+.about-workers .employee-block {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.about-workers .employee-block .img-wrap {
+  position: relative;
+}
+
+.about-workers .employee-block .img-wrap > img:first-child {
+  width: 100%;
+}
+
+.about-workers .employee-block .img-wrap .photo-worker {
+  overflow: hidden;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  position: absolute;
+  left: 31%;
+  bottom: -16%;
+  background: #fcfcfc;
+}
+
+.about-workers .employee-block .content-wrap {
+  border-left: 1px solid #dbe1e7;
+  border-right: 1px solid #dbe1e7;
+}
+
+.about-workers .employee-block .content-wrap p {
+  padding: 53px 40px 0 16px;
+  font-family: "MyriadProRegular";
+  font-size: 18px;
+  color: #616870;
+}
+
+.about-workers .employee-block .content-wrap a {
+  display: block;
+  padding: 25px 0 20px 16px;
+  font-family: "HelveticaNeue";
+  font-size: 14px;
+  color: #63c6ae;
+}
+
+.about-workers .employee-block .content-wrap a:hover {
+  font-weight: bold;
+}
+
+.news-info {
+  background: #f7f7f7;
+  padding: 33px 16px;
+}
+
+.news-info .news-block {
+  font-family: "HelveticaNeue";
+}
+
+.news-info .news-block h2 {
+  color: #616870;
+  font-size: 18px;
+  padding: 0 55px 26px 0;
+}
+
+.news-info .news-block p {
+  color: #737d84;
+  font-size: 14px;
+  padding-bottom: 35px;
+}
+
+.news-info button {
+  padding: 20px 110px;
+  text-align: center;
+  border-radius: 2px;
+  border: none;
+  font-family: 'Sintony';
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+.news-info .news-top-button {
+  background: #63c6ae;
+  margin-bottom: 20px;
+}
+
+.news-info .news-top-button:hover {
+  background: #58b9a1;
+}
+
+.news-info .news-bottom-button {
+  background: #455357;
+}
+
+.news-info .news-bottom-button:hover {
+  background: #1e2325;
+}
+
+.articles-wrapper {
+  font-family: "Sintony", sans-serif;
+}
+
+.articles-wrapper h2 {
+  padding: 19px;
+  background: #63c6ae;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.articles-wrapper article {
+  display: flex;
+  flex-flow: row wrap;
+  background: #242a2c;
+}
+
+.articles-wrapper article > :nth-child(1) {
+  background: url(../img/article-bg1.png) no-repeat;
+}
+
+.articles-wrapper article > :nth-child(2) {
+  background: url(../img/article-bg2.png) no-repeat;
+}
+
+.articles-wrapper article :nth-child(3) {
+  background: url(../img/article-bg3.png) no-repeat;
+}
+
+.articles-wrapper article :nth-child(4) {
+  background: url(../img/article-bg4.png) no-repeat;
+}
+
+.articles-wrapper article section {
+  width: 160px;
+  height: 160px;
+}
+
+.articles-wrapper article section .section-content {
+  display: none;
+}
+
+.articles-wrapper article section:hover .section-content {
+  display: block;
+}
+
+.articles-wrapper article section:hover .section-content h3 {
+  color: #58b9a1;
+  font-size: 16px;
+}
+
+.articles-wrapper article section:hover .section-content span {
+  color: #9da5a3;
+  font-size: 12px;
+}
+
+.company-info {
+  padding: 30px 16px;
+  background: #242a2c;
+  border-bottom: 12px solid #1e2325;
+  color: #9da5a3;
+  font-family: "Sintony", sans-serif;
+}
+
+.company-info .logo-company {
+  font-size: 20px;
+}
+
+.company-info p {
+  padding: 25px 0 37px;
+  font-size: 14px;
+}
+
+.company-info form {
+  overflow: hidden;
+  font-family: "Sintony", sans-serif;
+  font-size: 14px;
+}
+
+.company-info form label {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 18px;
+}
+
+.company-info form input, .company-info form textarea {
+  width: 100%;
+  padding: 24px 20px;
+  margin-bottom: 15px;
+  background: #181c1d;
+  border: none;
+  color: #9da5a3;
+  font-family: "Sintony", sans-serif;
+  font-size: 14px;
+}
+
+.company-info form input[type='submit'] {
+  padding: 20px 110px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background: #63c6ae;
+}
+
+.company-info form input[type='submit']:hover {
+  background: #58b9a1;
+}
+
+footer {
+  padding: 20px 12px;
+  background: #181c1e;
+  color: #9da5a3;
+  font-family: "Sintony", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  padding: 11px 11px;
+  color: #9da5a3;
+}
+
+footer a:hover {
+  color: #63c6ae;
+}
+
+footer p {
+  padding-top: 30px;
+  text-align: center;
+  line-height: 25px;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -102,11 +388,10 @@ header nav .topnav .dropbtn:hover .drop {
     position: absolute;
     display: block;
     width: 100%;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    opacity: 0;
   }
   .topnav.responsive a {
     float: none;
