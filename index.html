@@ -8,16 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/variables.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script>
-      function menuIconHandler() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    </script>
 </head>
 <body>
   <div class="main-wrapper">
@@ -50,52 +40,54 @@
       </div>
       <div class="about-workers">
         <h2>OUR TEAM</h2>
-        <div class="employee-block">
-          <div class="img-wrap">
-            <img src="img/bg-bear.png" alt="bg-image">          
-            <div class="photo-worker">
-              <img src="img/photo1.png" alt="bg-image">
+        <div class="workers-wrap">
+          <div class="employee-block">
+            <div class="img-wrap">
+              <img src="img/bg-bear.png" alt="bg-image">          
+              <div class="photo-worker">
+                <img src="img/photo1.png" alt="bg-image">
+              </div>
+            </div>
+            <div class="content-wrap">
+              <p>Adipiscing elit auris mattis suscipit est</p>
+              <a href="#" class="more-info">See more...</a>
             </div>
           </div>
-          <div class="content-wrap">
-            <p>Adipiscing elit auris mattis suscipit est</p>
-            <a href="#">See more...</a>
-          </div>
-        </div>
-        <div class="employee-block">
-          <div class="img-wrap">
-            <img src="img/bg-animals.png" alt="bg-image">
-            <div class="photo-worker">
-              <img src="img/photo2.png" alt="bg-image">
+          <div class="employee-block">
+            <div class="img-wrap">
+              <img src="img/bg-animals.png" alt="bg-image">
+              <div class="photo-worker">
+                <img src="img/photo2.png" alt="bg-image">
+              </div>
+            </div>
+            <div class="content-wrap">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              <a href="#" class="more-info">See more...</a>
             </div>
           </div>
-          <div class="content-wrap">
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-            <a href="#">See more...</a>
-          </div>
-        </div>
-        <div class="employee-block">
-          <div class="img-wrap">
-            <img src="img/bg-iphone.png" alt="bg-image">
-            <div class="photo-worker">
-              <img src="img/photo3.png" alt="bg-image">
+          <div class="employee-block">
+            <div class="img-wrap">
+              <img src="img/bg-iphone.png" alt="bg-image">
+              <div class="photo-worker">
+                <img src="img/photo3.png" alt="bg-image">
+              </div>
+            </div>
+            <div class="content-wrap">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              <a href="#" class="more-info">See more...</a>
             </div>
           </div>
-          <div class="content-wrap">
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-            <a href="#">See more...</a>
-          </div>
-        </div>
-        <div class="employee-block">
-          <div class="img-wrap">
-            <img src="img/bg-bush.png" alt="bg-image">
-            <div class="photo-worker">
-              <img src="img/photo4.png" alt="bg-image">
+          <div class="employee-block">
+            <div class="img-wrap">
+              <img src="img/bg-bush.png" alt="bg-image">
+              <div class="photo-worker">
+                <img src="img/photo4.png" alt="bg-image">
+              </div>
             </div>
-          </div>
-          <div class="content-wrap">
-            <p>Mauris mattis suscipit est, ut imperdiet tortor Proin sed</p>
-            <a href="#">See more...</a>
+            <div class="content-wrap">
+              <p>Mauris mattis suscipit est, ut imperdiet tortor Proin sed</p>
+              <a href="#" class="more-info">See more...</a>
+            </div>
           </div>
         </div>
       </div>
@@ -132,9 +124,11 @@
             eu metus in diam tincidunt eges tas non at odio. Interdum et malesuada
             fames ac ante ipsum primis in faucibus.
           </p>
+
+          <button class="news-top-button">BUTTON</button>
+          <button class="news-bottom-button">BUTTON</button>
         </div>
-        <button class="news-top-button">BUTTON</button>
-        <button class="news-bottom-button">BUTTON</button>
+
       </div>
         <div class="articles-wrapper">
           <h2>Latest articles</h2>
@@ -163,25 +157,55 @@
                 <span>14th APril 2013</span>
               </div>
             </section>
+            <!-- hide sections -->
+            <section  class="hide-sections">
+              <div class="section-content">
+                <h3>Gutful of bottlo no dramas he's got a </h3>
+                <span>14th APril 2013</span>
+              </div>
+            </section>
+            <section  class="hide-sections">
+              <div class="section-content">
+                <h3>Gutful of bottlo no dramas he's got a </h3>
+                <span>14th APril 2013</span>
+              </div>
+            </section>
+            <!-- end hide sections -->
           </article>
         </div>
         <div class="company-info">
-          <div class="logo-company">Company Logo</div>
-          <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. 
-            Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero.
-            Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. 
-            Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Vestibulum consectetur commodo eros,
-            vitae laoreet lectus aliq
-          </p>
-          <form action="#" method="post">
-            <label>Contact US</label>
-            <input type="email" name="email" placeholder="My email is ...">
-            <textarea name="add-info" placeholder="This is color for any user text in form 
-            (not for “place holder”)"></textarea>
-            <input type="submit" value="BUTTON">
-          </form>
+          <div class="company-info-wrap">
+              <div class="logo-company">
+                  <h2>Company Logo</h2>
+                  <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. 
+                    Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero.
+                    Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. 
+                    Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Vestibulum consectetur commodo eros,
+                    vitae laoreet lectus aliq
+                  </p>
+                </div>
+      
+                <!-- hide info blocks -->
+                <p class="hide-info-block">Nam mi enim, auctor non ultricies a, fringilla eu risus. 
+                  Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero.
+                  Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. 
+                  Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                  ridiculus mus. Vestibulum consectetur commodo eros,
+                  vitae laoreet lectus aliq
+                </p>
+                <!-- end hide blocks -->
+                
+                <form action="#" method="post">
+                  <label>Contact US</label>
+                  <input type="email" name="email" placeholder="My email is ...">
+                  <textarea name="add-info" placeholder="This is color for any user text in form 
+                  (not for “place holder”)"></textarea>
+                  <input type="submit" value="BUTTON">
+                </form>
+          </div>
         </div>
     </main>
     <footer>
@@ -194,5 +218,16 @@
       <p>The entirety of this site is protected </br>by copyright © 2001–2017 Website.com.</p>
     </footer>
   </div>
+ <!-- Allscripts  --> 
+  <script>
+    function menuIconHandler() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </body>
 </html>
