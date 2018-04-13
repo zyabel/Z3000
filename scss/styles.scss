@@ -27,13 +27,12 @@ header {
       height: 31px;
     }
 
-    .desctop-menu,
-    .desctop-drop {
+    .desktop-menu {
       display: none;
     }
-  }
+  }  
 
-  .desctop-drop {
+  .desktop-drop {
     display: none;
   }
 
@@ -41,6 +40,7 @@ header {
     position: relative;
 
     .topnav.responsive {
+      opacity: 0;
       position: absolute;
       display: block;
       width: 100%;
@@ -425,14 +425,30 @@ footer {
   }
 
   header,
+  .desktop-drop-wrapper,
   .global-info,
   .company-info,
-  .company-info {
+  .company-info,
+  .news-info-wrapper,
+  .articles-wrapper,
+  .articles-title-wrapper,
+  footer {
     max-width: 1600px;
     margin: 0 auto;
   } 
 
+  .global-info {
+    padding: 30px 0;
+  }
+
+  .logo,
+  .desktop-drop {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
   header {
+
     .logo a.icon {
       display: none;
     }
@@ -440,31 +456,44 @@ footer {
     nav {
       display: none;
     }
-
-    .desctop-drop {
-      display: none; 
-    }
     
-    .logo nav.desctop-menu {
+  .logo nav.desktop-menu {
       display: inline-block;
       padding-top: 6px;
 
       a {
         padding: 30px 20px;
+        border-radius: 4px;
         font-family: "MyriadProRegular";
         color :$text-dark-grey;
         font-size: $fontSizeOne;
 
         &:hover {
           color: $light-green;
+        }              
+      }  
+    }
+  }
+
+  .desktop-drop-wrapper {
+    background: $nav-green;
+  }
+
+  .desktop-drop.active  {
+      display: block;
+      padding: 29px 0;
+
+      a {
+        border-radius: 4px;
+        padding: 7px 11px;
+        color: $text-default;
+        text-transform: uppercase;
+        font-family: 'Sintony';
+
+        &:hover {
+          background: $nav-hover-green;
         }
       }
-
-      #dropbtn:hover .desctop-drop {
-        display: block;
-      }
-    }
-    
 
   }
 
@@ -487,13 +516,18 @@ footer {
     }
   }
 
-  .news-info {
-    display: flex;
-    justify-content: space-between;
+  .news-info-wrapper {
+    background: #f7f7f7;
+  }
+  
+  .news-info {   
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
     flex-direction: row-reverse;
 
     .news-block {
-      width: 49%;
+      width: 580px;
 
       button {
         padding: 15px 45px;
@@ -503,20 +537,22 @@ footer {
   }
 
   .articles-wrapper {
-    max-width: 1600px;
-    margin: 0 auto;
+    background: #63c6ae;
 
     h2 {
-      padding: 19px 0 19px 285px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 19px 0;
     }
 
     article {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
+      display: flex;  
+      -webkit-flex-flow: row wrap;
+      justify-content: space-around;
 
       section {
-        width: 196px;     
+        width: 266px;
+        height: 266px;     
       }
       
       section.hide-sections {
@@ -528,23 +564,26 @@ footer {
   .company-info .company-info-wrap{
     max-width: 1180px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
 
     .logo-company {
-      width: 20%;
+      width: 250px
     }
 
     .hide-info-block {
       display: block;
-      width: 20%;
+      width: 250px;
       margin-top: 25px;
     }
 
     form {
-      width: 35%;
+      width: 350px;
     }
-
-  }
+  } 
+  
+  footer {
+      padding: 20px 0;
+    }
 }

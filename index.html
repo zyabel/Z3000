@@ -15,17 +15,18 @@
       <div class="logo">
         <p><a href="#" class="logo-link">Company logo</a></p>
         <p><a href="javascript:void(0);" class="icon" onclick="menuIconHandler()"></a></p>
-        <nav class="desctop-menu">
+        <nav class="desktop-menu">
           <a href="#">HOME</a>
-          <a href="#" id="dropbtn">SERVICES</a>                
+          <a href="#" class="dropbtn" onclick="desktopDropHandler()">SERVICES</a>                
           <a href="#">OUR BUSINESSES</a>
         </nav>
       </div>
-      <div class="desctop-drop">
-        <a href="#">creative work</a>
-        <a href="#">other work</a>
-        <a href="#">art</a>
-        </li>
+      <div class="desktop-drop-wrapper">
+        <div class="desktop-drop" id="desktopDropDown">
+          <a href="#">creative work</a>
+          <a href="#">other work</a>
+          <a href="#">art</a>
+        </div>
       </div>
       <nav>
         <ul class="topnav" id="myTopnav">
@@ -102,47 +103,37 @@
           </div>
         </div>
       </div>
-      <div class="news-info">
-        <div class="news-block">
-          <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit
-            Mauris mattis suscipit e
-            st, ut imperdiet tortor. Proin sed
-          </h2>
-          <p>orem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris mattis suscipit e
-            st, ut imperdiet tortor. Proin sed molestie
-            massa. Nullam condimentum mauris et rhoncus sagittis. Sed 
-            eu metus in diam tincidunt eges
-            tas non at odio.
-          </p>
-          <p>nterdum et malesuada fames ac ante ipsum primis in 
-            faucibus. Aenean vitae lectus er
-            at. Duis consequat laoreet velit. Mauris
-            convallis, sapien sit amet scelerisque accumsan, felis 
-            urna aliquet nunc, viverra mol
-            lis odio tellus a nisl. Nulla lobortis
-            lectus non rutrum viverra. Sed et molestie libero. Sed
-            ut ultrices dui.
-          </p>
+      <div class="news-info-wrapper">
+        <div class="news-info">
+          <div class="news-block">
+            <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit Mauris mattis suscipit e st, ut imperdiet tortor. Proin sed
+            </h2>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit e st, ut imperdiet tortor. Proin sed molestie
+              massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt eges tas non at odio.
+            </p>
+            <p>nterdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus er at. Duis consequat laoreet velit.
+              Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mol lis odio tellus a nisl.
+              Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.
+            </p>
+          </div>
+          <div class="news-block">
+            <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit Mauris mattis suscipit est, ut imperdiet tortor. Proin sed
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie
+              massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt eges tas non at odio. Interdum
+              et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+        
+            <button class="news-top-button">BUTTON</button>
+            <button class="news-bottom-button">BUTTON</button>
+          </div>
+        
         </div>
-        <div class="news-block">
-          <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit 
-            Mauris mattis suscipit est, ut imperdiet tortor. Proin sed
-          </h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie
-            massa. Nullam condimentum mauris et rhoncus sagittis. Sed 
-            eu metus in diam tincidunt eges tas non at odio. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus.
-          </p>
-
-          <button class="news-top-button">BUTTON</button>
-          <button class="news-bottom-button">BUTTON</button>
-        </div>
-
       </div>
         <div class="articles-wrapper">
-          <h2>Latest articles</h2>
+          <div class="articles-title-wrapper">
+            <h2>Latest articles</h2>
+          </div>
           <article>            
             <section>
               <div class="section-content">
@@ -239,6 +230,15 @@
         x.className = "topnav";
       }
     }
+
+    function desktopDropHandler() {
+        var x = document.getElementById("desktopDropDown");
+        if (x.className === "desktop-drop") {
+          x.className += " active";
+        } else {
+          x.className = "desktop-drop";
+        }
+      }
   </script>
 </body>
 </html>
