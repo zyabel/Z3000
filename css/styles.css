@@ -62,9 +62,7 @@ header nav {
 }
 
 header nav .topnav.responsive {
-  opacity: 0;
   position: absolute;
-  display: block;
   width: 100%;
   transition-property: opacity;
   transition-duration: 1s;
@@ -73,7 +71,8 @@ header nav .topnav.responsive {
 }
 
 header nav .topnav {
-  display: none;
+  opacity: 0;
+  position: absolute;
   overflow: hidden;
   background-color: #333;
   text-transform: uppercase;
@@ -319,12 +318,15 @@ header nav .topnav .dropbtn:hover .drop {
 }
 
 .articles-wrapper article section .section-content {
-  display: none;
+  opacity: 0;
   padding: 37px 16px;
 }
 
 .articles-wrapper article section:hover .section-content {
-  display: block;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  opacity: 1;
 }
 
 .articles-wrapper article section:hover .section-content h3 {
@@ -447,7 +449,8 @@ footer p {
     padding: 30px 0;
   }
   .logo,
-  .desktop-drop {
+  .desktop-drop,
+  .inside-wrap {
     max-width: 1180px;
     margin: 0 auto;
   }
@@ -472,9 +475,15 @@ footer p {
     color: #63c6ae;
   }
   .desktop-drop-wrapper {
+    opacity: 0;
     background: #58b9a1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    opacity: 1;
   }
   .desktop-drop.active {
+    position: relative;
     display: block;
     padding: 29px 0;
   }
@@ -487,6 +496,17 @@ footer p {
   }
   .desktop-drop.active a:hover {
     background: #53af99;
+  }
+  .desktop-drop:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #58b9a1;
+    top: -4px;
+    right: 200px;
+    position: absolute;
   }
   .about-workers,
   .news-info {
@@ -547,6 +567,9 @@ footer p {
     width: 266px;
     height: 266px;
   }
+  .articles-wrapper article section .section-content {
+    padding: 90px 16px;
+  }
   .articles-wrapper article section.hide-sections {
     display: block;
   }
@@ -558,17 +581,24 @@ footer p {
     justify-content: space-around;
   }
   .company-info .company-info-wrap .logo-company {
-    width: 250px;
+    width: 300px;
   }
   .company-info .company-info-wrap .hide-info-block {
     display: block;
-    width: 250px;
+    width: 300px;
     margin-top: 25px;
   }
   .company-info .company-info-wrap form {
-    width: 350px;
+    width: 450px;
   }
   footer {
     padding: 20px 0;
+  }
+  footer .inside-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .inside-wrap p {
+    padding: 11px 11px;
   }
 }

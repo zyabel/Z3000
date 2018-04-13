@@ -40,15 +40,14 @@ header {
     position: relative;
 
     .topnav.responsive {
-      opacity: 0;
       position: absolute;
-      display: block;
       width: 100%;
       @include animation;
     }
     
     .topnav {
-      display: none;
+      opacity: 0;
+      position: absolute;
       overflow: hidden;
       background-color: #333;
       text-transform: uppercase;
@@ -302,14 +301,14 @@ header {
       height: 160px;
 
       .section-content {
-        display: none;     
+        opacity: 0;
         padding: 37px 16px;   
       }
 
 
       &:hover {        
         .section-content {
-          display: block;  
+          @include animation;
 
           h3 {
             color: $nav-green;
@@ -442,7 +441,8 @@ footer {
   }
 
   .logo,
-  .desktop-drop {
+  .desktop-drop,
+  .inside-wrap {
     max-width: 1180px;
     margin: 0 auto;
   }
@@ -476,25 +476,39 @@ footer {
   }
 
   .desktop-drop-wrapper {
+    opacity: 0;
     background: $nav-green;
+    @include animation;
   }
 
-  .desktop-drop.active  {
-      display: block;
-      padding: 29px 0;
+  .desktop-drop.active {
+    position: relative;
+    display: block;
+    padding: 29px 0;
 
-      a {
-        border-radius: 4px;
-        padding: 7px 11px;
-        color: $text-default;
-        text-transform: uppercase;
-        font-family: 'Sintony';
+    a {
+      border-radius: 4px;
+      padding: 7px 11px;
+      color: $text-default;
+      text-transform: uppercase;
+      font-family: 'Sintony';
 
-        &:hover {
-          background: $nav-hover-green;
-        }
+      &:hover {
+        background: $nav-hover-green;
       }
+    }
+  }
 
+  .desktop-drop:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $nav-green;
+    top: -4px;
+    right: 200px;
+    position: absolute;
   }
 
   .about-workers,
@@ -567,6 +581,10 @@ footer {
       section {
         width: 266px;
         height: 266px;     
+
+        .section-content {
+          padding: 90px 16px; 
+        }
       }
       
       section.hide-sections {
@@ -583,21 +601,30 @@ footer {
     justify-content: space-around;
 
     .logo-company {
-      width: 250px
+      width: 300px
     }
 
     .hide-info-block {
       display: block;
-      width: 250px;
+      width: 300px;
       margin-top: 25px;
     }
 
     form {
-      width: 350px;
+      width: 450px;
     }
   } 
   
   footer {
-      padding: 20px 0;
+    padding: 20px 0;
+
+    .inside-wrap {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        padding: 11px 11px;
+      }
     }
+  }
 }
