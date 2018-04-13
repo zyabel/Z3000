@@ -504,11 +504,25 @@ footer {
   }
 
   .workers-wrap {
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+
+    >:nth-child(1) {
+      order: 2;
+    }
+
+    :nth-child(3) {
+      order: 4;
+    }
+
+    :nth-child(4) {
+      border: 5px solid $nav-green;
+      order: 3;
+    }
 
     .employee-block {
-      width: 23%;
+      width: 280px;
 
       a.more-info {
           display: none;

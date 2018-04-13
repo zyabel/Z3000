@@ -495,10 +495,21 @@ footer p {
   }
   .workers-wrap {
     display: flex;
-    justify-content: space-between;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .workers-wrap > :nth-child(1) {
+    order: 2;
+  }
+  .workers-wrap :nth-child(3) {
+    order: 4;
+  }
+  .workers-wrap :nth-child(4) {
+    border: 5px solid #58b9a1;
+    order: 3;
   }
   .workers-wrap .employee-block {
-    width: 23%;
+    width: 280px;
   }
   .workers-wrap .employee-block a.more-info {
     display: none;
